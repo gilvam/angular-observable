@@ -1,7 +1,11 @@
+<mat-sidenav-container autosize>
 
-<div><a [routerLink]="['login']" routerLinkActive="mat-active"> login </a></div>
-<div><a [routerLink]="['home']" routerLinkActive="mat-active"> home </a></div>
-<div><a [routerLink]="['account/mei']" routerLinkActive="mat-active"> account/mei </a></div>
-<div><a [routerLink]="['account/pj']" routerLinkActive="mat-active"> account/pj </a></div>
+  <app-menu-action></app-menu-action>
+  <app-sidenav-start></app-sidenav-start>
 
-<router-outlet></router-outlet>
+  <!--<mat-sidenav-container autosize [ngClass]="{ 'is-not-logged-in': !(isLoggedIn$ | async) }">-->
+
+
+  <router-outlet></router-outlet>
+
+</mat-sidenav-container>
